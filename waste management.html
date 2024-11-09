@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waste Management & Recycling Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            position: relative;
+            background-color: black;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Places the slideshow behind other content */
+        }
+
+        /* Slideshow images */
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Header, nav, content, and footer styles remain the same */
+        header, nav, .content, footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p, nav a, .content h2, .content p, footer p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <img class="mySlides" src="https://www.deskera.com/blog/content/images/2022/09/zibik-iR4mClggzEU-unsplash.jpg" alt="Image 1">
+        <img class="mySlides" src="https://www.laceco.me/wp-content/uploads/2019/02/New-Recycle-Center-078.jpg" alt="Image 2">
+        <img class="mySlides" src="https://bardalevillage.co.za/wp-content/uploads/2017/05/Recycling-at-Home.jpg" alt="Image 3">
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Waste Management & Recycling Platform</h1>
+        <p>Helping you reduce, reuse, and recycle for a greener tomorrow</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#scheduling">Schedule Pickup</a>
+        <a href="#education">Learn to Recycle</a>
+        <a href="#community">Join the Community</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content" id="scheduling">
+        <h2>Schedule Your Waste Pickup</h2>
+        <p>Our platform allows you to easily schedule waste and recycling pickups. Just enter your address and select the services you need.</p>
+        <!-- Button linking to the schedule pickup page -->
+        <a href="schedule-pickup.html" class="cta-button">Schedule Pickup</a>
+    </div>
+
+    <div class="content" id="education">
+        <h2>Learn How to Recycle</h2>
+        <p>Get access to educational resources to help you become a recycling expert. Learn which materials go where and how you can reduce waste in your daily life.</p>
+        <!-- Button linking to the learn to recycle page -->
+        <a href="learn-to-recycle.html" class="cta-button">Explore Educational Resources</a>
+    </div>
+
+    <div class="content" id="community">
+        <h2>Join the Recycling Community</h2>
+        <p>Track your recycling habits, earn rewards, and participate in community challenges. Together, we can make a difference!</p>
+        <!-- Button linking to the join the community page -->
+        <a href="community.html" class="cta-button">Join Now</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Waste Management & Recycling Platform | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var slides = document.getElementsByClassName("mySlides");
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+</html>
